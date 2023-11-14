@@ -33,6 +33,7 @@ public class TestTaskOne extends AbstractTest{
         Pattern passwordPattern = Pattern.compile("spring.datasource.password=techjobs");
         Matcher passwordMatcher= passwordPattern.matcher(propsFileContents);
         boolean passwordFound = passwordMatcher.find();
+        System.out.println(passwordMatcher);
         assertTrue(passwordFound, "Database password not found or is incorrect");
     }
 
